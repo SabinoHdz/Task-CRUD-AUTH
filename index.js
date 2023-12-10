@@ -10,12 +10,15 @@ const { dbConecction } = require("./db");
 //conexion a la base de datos
 dbConecction();
 
+//TODO:configurar el cors
+
 //middlewares
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cookieParser());
 //routes
 routerApi(app);
+//TODO: crear un middleware para manejar los errores
 
 app.listen(PORT, () => {
   console.log(`SERVER IS RUNNING ON PORT ${PORT}`);
