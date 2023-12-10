@@ -2,6 +2,8 @@ const jwt = require("jsonwebtoken");
 const bycrypt = require("bcryptjs");
 const User = require("./../models/user.model");
 const { generarJWT } = require("../utils/generar-jwt");
+
+//TODO: generar un servicio para el login y el register y que el controlador solo llame a ese servicio
 const register = async (req, res) => {
   try {
     const body = req.body;
@@ -59,7 +61,7 @@ const logout = async (req, res) => {
       message: "logout success",
     });
   } catch (error) {
-    res.status(500).s;
+    res.status(500);
     console.log("error: ", error);
   }
 };

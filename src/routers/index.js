@@ -9,3 +9,4 @@ const routerApi = (app) => {
   router.use("/tasks", tasksRouter);
 };
 module.exports = routerApi;
+//TODO:endpoints para busquedas avanzadas filtros, paginacion, ordenamiento, etc
